@@ -1,0 +1,21 @@
+name: glassdoor_scraper
+channels:
+  - defaults
+dependencies:
+  - bzip2=1.0.8
+  - ca-certificates=2022.10.11
+  - certifi=2022.9.24
+  - libffi=3.4.2
+  - openssl=1.1.1q
+  - pip=22.2.2
+  - python=3.10.6
+  - setuptools=65.5.0
+  - sqlite=3.39.3
+  - tk=8.6.12
+  - tzdata=2022f
+  - vc=14.2
+  - vs2015_runtime=14.27.29016
+  - wheel=0.37.1
+  - wincertstore=0.2
+  - xz=5.2.6
+  - zlib=1.2.13

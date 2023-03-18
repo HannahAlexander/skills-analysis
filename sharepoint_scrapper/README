@@ -1,0 +1,35 @@
+## Python SharePoint Office365 API
+
+### Environment Variables
+To run this project, you will need to add the following environment variables to your .env file
+
+sharepoint_email
+
+sharepoint_password
+
+### Running Instructions
+#### Installation
+Create Virtual Environment
+
+  python -m venv env
+
+Activate Environment
+
+  source env/Scripts/activate
+
+Install Packages
+
+  pip install -r requirements.txt
+
+#### Downloading the Sharepoint files
+Run the download_cvs.ipynb
+
+## SharePoint Data Analysis
+The full analysis can be found in the analysing_data_final.ipynb.
+Key functions can be found in the analysing_data_final.py file. This includes:
+    - get_clean_descriptions, returns a dictionary of each employee and their cleaned CV
+    - get_employee_names, a list on employee names
+    - create_clusters_of_words, a dictionary of each cluster and the words it contains
+    - wordcloud_clusters, a plot of the wordcloud of the most influential words for each cluster
+    - top_skills_employees, a dataframe showing the count of each key word in each employees cv
+    - plotly_clusters, a plotly figure of the clustered employees and the clusters boundaries
