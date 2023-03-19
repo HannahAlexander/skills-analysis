@@ -71,7 +71,7 @@ import docx2txt
 from bs4 import BeautifulSoup
 
 # read in CVs from storage folder
-def extract_cv(folder = "../storage/"):
+def extract_cv(folder = "../../../storage/"):
     
     print(os.getcwd())
     text_files = {}
