@@ -149,7 +149,7 @@ def create_clusters_of_words(descriptions = get_clean_descriptions()):
     model.fit(vectors) #fit model to clusters
 
     order_centroids = model.cluster_centers_.argsort()[:, ::-1] # get centroids of each cluster
-    terms = vectoriser.get_feature_names() # get words in each cluster
+    terms = vectoriser.get_feature_names_out() # get words in each cluster
 
     cluster_list = {}
 
@@ -186,7 +186,7 @@ def plot_clusters(descriptions = get_clean_descriptions(), employee_names = get_
     model.fit(vectors) #fit model to clusters
 
     # plot employee clusters
-    terms = vectoriser.get_feature_names() # get words in each cluster
+    terms = vectoriser.get_feature_names_out() # get words in each cluster
     kmean_indices = model.fit_predict(vectors) #types of cluster
 
     fig, ax = plt.subplots(1, figsize=(15,10))
@@ -247,7 +247,7 @@ def wordcloud_clusters(descriptions = get_clean_descriptions()):
     # create set of words that meet TDIF criteria
     denselist = dense.tolist()
 
-    terms = vectoriser.get_feature_names()
+    terms = vectoriser.get_feature_names_out()
     true_k = 3 #number of clusters we want
     model = KMeans(n_clusters= true_k, init = "k-means++", max_iter=100, n_init=1, random_state= 4)
     model.fit(vectors) #fit model to clusters
@@ -350,7 +350,7 @@ def plotly_clusters(descriptions = get_clean_descriptions(), employee_names = ge
     model.fit(vectors) #fit model to clusters
 
     # plot employee clusters
-    terms = vectoriser.get_feature_names() # get words in each cluster
+    terms = vectoriser.get_feature_names_out() # get words in each cluster
     kmean_indices = model.fit_predict(vectors) #types of cluster
 
     fig, ax = plt.subplots(1, figsize=(15,10))
