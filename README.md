@@ -28,3 +28,6 @@ To run the analysis on this data run the data_analysis notebook from within the 
 
 ### Dashboard
 To run the Dashboard, set you working directory to ".\skills-analysis\skills_dashboard\src\components" and from within the terminal run python main.py
+
+## TODO
+- Update Dahsboard to contain analysis from glassdoor
