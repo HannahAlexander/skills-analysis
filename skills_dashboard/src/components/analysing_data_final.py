@@ -32,7 +32,7 @@ import sys
 sys.path.append('C:/Users/hannah.alexander/OneDrive - Ascent Software Ltd/Documents/Internal projects/ascent-skills-analysis/sharepoint_scrapper')
 
 from extract_text import extract_cv
-
+cvs = extract_cv()
 # create list of stopwords
 stop_words = stopwords.words('english') + ["restricted", "external", "use", "used", "data", "overview", "profile", "professional_experience",
  "skills", "tools_and_utilities", "education", "languages", "data_scientist", "data_science", "university", "using", "&amp", "&", "end", "new", "work", "including", "19", "develop"]
@@ -69,7 +69,7 @@ sys.path.append('C:/Users/hannah.alexander/OneDrive - Ascent Software Ltd/Docume
 from nlp import replace_all, remove_punctuation,remove_non_ascii, clean_text
 
 # read in CVs from storage folder
-cvs = extract_cv()
+#cvs = extract_cv()
 
 # get list of employee names
 employee = list(cvs.keys())
