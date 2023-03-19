@@ -1,4 +1,4 @@
-# Ascent Skills Analysis
+# Skills Analysis
 Updated: 03/11/22
 
 Analysis of data that may give us insight of strength and weaknesses of knowledge throughout the business compared to what projects we win and lose as a business. 
