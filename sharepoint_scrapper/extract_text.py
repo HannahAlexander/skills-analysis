@@ -14,7 +14,7 @@ from nltk.stem.snowball import SnowballStemmer
 import inflect
 from nltk import LancasterStemmer
 import sys
-import os
+
 
 # extract text
 def extract_cv(folder = "../storage/"):

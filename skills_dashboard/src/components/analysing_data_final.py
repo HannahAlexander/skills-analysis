@@ -29,9 +29,9 @@ from wordcloud import WordCloud
 
 import sys
 #sys.path.append('../../../sharepoint_scrapper')
-sys.path.append('C:/Users/hannah.alexander/OneDrive - Ascent Software Ltd/Documents/Internal projects/ascent-skills-analysis/sharepoint_scrapper')
+#sys.path.append('C:/Users/hannah.alexander/OneDrive - Ascent Software Ltd/Documents/Internal projects/ascent-skills-analysis/sharepoint_scrapper')
 
-from extract_text import extract_cv
+#from extract_text import extract_cv
 
 # create list of stopwords
 stop_words = stopwords.words('english') + ["restricted", "external", "use", "used", "data", "overview", "profile", "professional_experience",
@@ -67,8 +67,25 @@ sys.path.append('C:/Users/hannah.alexander/OneDrive - Ascent Software Ltd/Docume
 #sys.path.append('../../../text_cleaning')
 
 from nlp import replace_all, remove_punctuation,remove_non_ascii, clean_text
+import docx2txt
+from bs4 import BeautifulSoup
 
 # read in CVs from storage folder
+def extract_cv(folder = "../storage/"):
+    
+    print(os.getcwd())
+    text_files = {}
+    for f in os.listdir(folder):
+        try:
+            file_name = folder + f
+            text = docx2txt.process(file_name)
+            # using beautifulsoup to tidy things up
+            soup = str(BeautifulSoup(text, "html.parser"))
+            text_files[f] = soup
+        except:
+            pass
+    
+    return(text_files)
 cvs = extract_cv()
 
 # get list of employee names
